@@ -8,4 +8,3 @@
 
 ## Issues
 * color picker crashes on Firefox Developer edition
-* color picker is a text box on Safari
