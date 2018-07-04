@@ -1,15 +1,11 @@
-
-
 // Select color input
-// const colorInput = document.querySelector("input");
-// console.log(colorInput.value);
-// colorInput.addEventListener("input", function() {
-//     console.log("color has been changed");
-// });
+const colorInput = document.querySelector("#colorPicker");
+const color = colorInput.value;
+
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid() {
-    // Your code goes here!
-  }
+  // Your code goes here!
+}
