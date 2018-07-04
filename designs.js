@@ -19,3 +19,7 @@ function makeGrid() {
     }
   }
 }
+
+// call makeGrid when user clicks the submit button
+const submit = document.querySelector("input[type='submit']");
+submit.addEventListener("click", makeGrid);
