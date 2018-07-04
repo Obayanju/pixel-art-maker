@@ -10,10 +10,10 @@ const height = document.querySelector("#inputHeight").value;
 function makeGrid() {
   const grid = document.querySelector("table");
   // console.log(grid);
-  for (const y = 0; y < height; y++) {
+  for (let y = 0; y < height; y++) {
     tableRow = document.createElement("tr");
     grid.appendChild(tableRow);
-    for (const x = 0; x < width; x++) {
+    for (let x = 0; x < width; x++) {
       tableColumn = document.createElement("td");
       grid.appendChild(tableColumn);
     }
