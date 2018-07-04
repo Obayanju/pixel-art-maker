@@ -15,7 +15,7 @@ function makeGrid() {
   for (let y = 0; y < height; y++) {
     grid.appendChild(tableRow);
     for (let x = 0; x < width; x++) {
-      grid.appendChild(tableColumn);
+      tableRow.appendChild(tableColumn);
     }
   }
 }
