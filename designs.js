@@ -2,6 +2,10 @@
 const colorInput = document.querySelector("#colorPicker");
 const color = colorInput.value;
 
+// call makeGrid when user clicks the submit button
+const submit = document.querySelector("input[type='button']");
+submit.addEventListener("click", makeGrid);
+
 // Select size input
 function getSize() {
   const height = document.querySelector("#inputHeight").value;
@@ -29,10 +33,7 @@ function makeGrid() {
   setColor();
 }
 
-// call makeGrid when user clicks the submit button
-const submit = document.querySelector("input[type='button']");
-submit.addEventListener("click", makeGrid);
-
+// set color when user clicks on a cell
 function setColor() {
   // table would contain a NodeList. NB: NodeList is a static collection
   const tableCell = document.querySelectorAll("td");
