@@ -3,8 +3,10 @@ const colorInput = document.querySelector("#colorPicker");
 const color = colorInput.value;
 
 // Select size input
-const width = document.querySelector("#inputWidth").value;
-const height = document.querySelector("#inputHeight").value;
+function getSize() {
+  const height = document.querySelector("#inputHeight").value;
+  const width = document.querySelector("#inputWidth").value;
+}
 
 // When size is submitted by the user, call makeGrid()
 function makeGrid() {
