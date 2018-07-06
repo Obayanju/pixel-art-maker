@@ -16,12 +16,13 @@ function makeGrid() {
   const width = size[0];
   const height = size[1];
   const grid = document.querySelector("table");
-  const tableRow = document.createElement("tr");
-  const tableColumn = document.createElement("td");
-  console.log(width, height);
+  // console.log(width, height);
   for (let y = 0; y < height; y++) {
+    // table row is intitialized inside the for loop so as to create a different <tr> in each loop
+    const tableRow = document.createElement("tr");
     grid.appendChild(tableRow);
     for (let x = 0; x < width; x++) {
+      const tableColumn = document.createElement("td");
       tableRow.appendChild(tableColumn);
     }
   }
