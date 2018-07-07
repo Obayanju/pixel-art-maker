@@ -1,5 +1,5 @@
 // call makeGrid when user clicks the submit button
-const submit = document.querySelector("input[type='button']");
+const submit = document.querySelector("input[type='submit']");
 submit.addEventListener("click", makeGrid);
 
 // Select size input
@@ -11,6 +11,8 @@ function getSize() {
 
 // When size is submitted by the user, call makeGrid()
 function makeGrid() {
+  // prevent submit button from reloading page
+  event.preventDefault();
   // get the users size input
   const size = getSize();
   const width = size[0];
