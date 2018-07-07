@@ -13,11 +13,13 @@ function getSize() {
 function makeGrid() {
   // prevent submit button from reloading page
   event.preventDefault();
+  const grid = document.querySelector("table");
+  // clear any previously created table
+  grid.innerHTML = "";
   // get the users size input
   const size = getSize();
   const width = size[0];
   const height = size[1];
-  const grid = document.querySelector("table");
   for (let y = 0; y < height; y++) {
     // table row is intitialized inside the for loop so as to create a different <tr> in each loop
     const tableRow = document.createElement("tr");
