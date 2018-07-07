@@ -25,20 +25,14 @@ function makeGrid() {
       tableRow.appendChild(tableColumn);
     }
   }
+  grid.addEventListener("click", setCellColor);
   // we should only be able to set color only after the grid is created
-  setColor();
+  // setColor();
 }
 
-// set color when user clicks on a cell
-function setColor() {
-  // table would contain a NodeList. NB: NodeList is a static collection
-  const tableCell = document.querySelectorAll("td");
-  // loop through all table cells and add an event listener to listen for a click
-  tableCell.forEach(function(currentCell) {
-    currentCell.addEventListener("click", function(event) {
-      // select the color picker and get its value
-      const colorPicker = document.querySelector("input[type='color']");
-      currentCell.style.backgroundColor = colorPicker.value;
-    });
-  });
+// function to run when user clicks on a cell
+function setCellColor(event) {
+  const colorPicker = document.querySelector("input[type='color']");
+  event.target.style.backgroundColor = colorPicker.value;
+  // console.log(event.target);
 }
