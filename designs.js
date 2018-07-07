@@ -1,7 +1,3 @@
-// Select color input
-const colorInput = document.querySelector("#colorPicker");
-const color = colorInput.value;
-
 // call makeGrid when user clicks the submit button
 const submit = document.querySelector("input[type='button']");
 submit.addEventListener("click", makeGrid);
@@ -40,7 +36,9 @@ function setColor() {
   // loop through all table cells and add an event listener to listen for a click
   tableCell.forEach(function(currentCell) {
     currentCell.addEventListener("click", function(event) {
-      currentCell.style.backgroundColor = color;
+      // select the color picker and get its value
+      const colorPicker = document.querySelector("input[type='color']");
+      currentCell.style.backgroundColor = colorPicker.value;
     });
   });
 }
