@@ -30,13 +30,10 @@ function makeGrid() {
     }
   }
   grid.addEventListener("click", setCellColor);
-  // we should only be able to set color only after the grid is created
-  // setColor();
 }
 
 // function to run when user clicks on a cell
 function setCellColor(event) {
   const colorPicker = document.querySelector("input[type='color']");
   event.target.style.backgroundColor = colorPicker.value;
-  // console.log(event.target);
 }
